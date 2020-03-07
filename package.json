@@ -1,0 +1,16 @@
+{
+    "name": "order-system",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "build:css": "tailwind build assets/src/style.css -o assets/css/style.css"
+    },
+    "keywords": [],
+    "author": "aaa",
+    "license": "ISC",
+    "dependencies": {
+        "tailwindcss": "^1.1.3"
+    }
+
+}
