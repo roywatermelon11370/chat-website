@@ -634,13 +634,19 @@ video {
 }
 
 *::-moz-selection {
-  background-color: #38b2ac;
+  background-color: #667eea;
   color: #fff;
 }
 
 *::selection {
-  background-color: #38b2ac;
+  background-color: #667eea;
   color: #fff;
+}
+
+a {
+  color: #667eea;
+} a:hover {
+  color: #4c51bf;
 }
 
 /* btn */
@@ -653,6 +659,13 @@ video {
   border-radius: 0.25rem;
   display: inline-block;
   text-transform: uppercase;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.btn:hover {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
 .btn::-moz-selection {
@@ -672,6 +685,13 @@ video {
   font-size: 1.125rem;
   display: inline-block;
   text-transform: uppercase;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.btn-lg:hover {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
 .btn-lg::-moz-selection {
@@ -689,6 +709,7 @@ video {
 
 .btn-primary:hover {
   background-color: #5a67d8;
+  color: #fff;
 }
 
 .btn-primary:focus {
@@ -700,31 +721,14 @@ video {
   background-color: #434190;
 }
 
-.btn-accent {
-  background-color: #38b2ac;
-  color: #fff;
-}
-
-.btn-accent:hover {
-  background-color: #319795;
-}
-
-.btn-accent:focus {
-  outline: 0;
-}
-
-.btn-accent:active {
-  outline: 0;
-  background-color: #285e61;
-}
-
-.btn-red {
+.btn-danger {
   background-color: #f56565;
   color: #fff;
 }
 
 .btn-red:hover {
   background-color: #e53e3e;
+  color: #fff;
 }
 
 .btn-red:focus {
@@ -736,21 +740,23 @@ video {
   background-color: #9b2c2c;
 }
 
-.btn-plain {
-  background-color: transparent;
+.btn-secondary {
+  background-color: #edf2f7;
+  color: #2d3748;
 }
 
-.btn-plain:hover {
+.btn-secondary:hover {
   background-color: #e2e8f0;
+  color: #2d3748;
 }
 
-.btn-plain:focus {
+.btn-secondary:focus {
   outline: 0;
 }
 
-.btn-plain:active {
+.btn-secondary:active {
   outline: 0;
-  background-color: #cbd5e0;
+  background-color: #a0aec0;
 }
 
 /* form */
@@ -776,7 +782,7 @@ video {
 .custom-checkbox input[type="checkbox"]:checked + label::before{
   content: "\F132";
   display: inline-block;
-  color: #38b2ac;
+  color: #667eea;
   position: relative;
   margin-right: 0.75rem;
   font: normal normal normal 24px/1 "Material Design Icons";
@@ -784,7 +790,7 @@ video {
 }
 
 .custom-checkbox input[type="checkbox"]:checked + label:hover::before{
-  color: #319795;
+  color: #5a67d8;
 }
 
 .custom-input {
@@ -868,22 +874,22 @@ video {
   background-position: center;
 }
 
-.bg-form::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #667eea;
-  opacity: 0.5;
-  content: "";
-  z-index: 2;
-}
-
 /* shadow */
 
 .shadow-accent {
   box-shadow: 0px 3px 20px rgba(72, 187, 120, 0.5)
+}
+
+/* grid */
+
+.grid-4-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+} @media(max-width: 576px) {
+  .grid-4-col {
+    grid-template-columns: 1fr;
+  }
 }
 
 .sr-only {

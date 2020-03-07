@@ -9,13 +9,22 @@
 }
 
 *::selection {
-    @apply bg-teal-500 text-white;
+    @apply bg-indigo-500 text-white;
 }
+
+a {
+    @apply text-indigo-500;
+    } a:hover {
+        @apply text-indigo-700;
+    }
 
 /* btn */
 .btn {
     @apply px-5 py-2 rounded inline-block uppercase;
-
+    transition: all .2s ease;
+    }
+    .btn:hover {
+        transition: all .2s ease;
     }
     .btn::selection {
         background: transparent;
@@ -23,7 +32,10 @@
 
 .btn-lg {
     @apply px-8 py-3 rounded text-lg inline-block uppercase;
-
+    transition: all .2s ease;
+    }
+    .btn-lg:hover {
+        transition: all .2s ease;
     }
     .btn-lg::selection {
         background: transparent;
@@ -34,7 +46,7 @@
 
     }
     .btn-primary:hover {
-        @apply bg-indigo-600;
+        @apply bg-indigo-600 text-white;
     
     }
     .btn-primary:focus {
@@ -44,28 +56,11 @@
         @apply outline-none bg-indigo-800;
     }
 
-.btn-accent {
-    @apply bg-teal-500 text-white;
-
-    }
-    .btn-accent:hover {
-        @apply bg-teal-600;
-    
-    }
-    .btn-accent:focus {
-        @apply outline-none;
-    }
-    .btn-accent:active {
-        @apply outline-none bg-teal-800;
-    }
-
-.btn-red {
+.btn-danger {
     @apply bg-red-500 text-white;
-
     }
     .btn-red:hover {
-        @apply bg-red-600;
-    
+        @apply bg-red-600 text-white;
     }
     .btn-red:focus {
         @apply outline-none;
@@ -74,18 +69,17 @@
         @apply outline-none bg-red-800;
     }
 
-.btn-plain {
-    @apply bg-transparent;
-
-    } 
-    .btn-plain:hover {
-        @apply bg-gray-300;
+.btn-secondary {
+    @apply bg-gray-200 text-gray-800;
     }
-    .btn-plain:focus {
+    .btn-secondary:hover {
+        @apply bg-gray-300 text-gray-800;
+    }
+    .btn-secondary:focus {
         @apply outline-none;
     }
-    .btn-plain:active {
-        @apply outline-none bg-gray-400;
+    .btn-secondary:active {
+        @apply outline-none bg-gray-500;
     }
 
 /* form */
@@ -105,13 +99,13 @@
     }
     .custom-checkbox input[type="checkbox"]:checked + label::before{
         content: "\F132";
-        @apply inline-block text-teal-500 relative mr-3;
+        @apply inline-block text-indigo-500 relative mr-3;
         font: normal normal normal 24px/1 "Material Design Icons";
         font-size: inherit;
     
     }
     .custom-checkbox input[type="checkbox"]:checked + label:hover::before{
-        @apply text-teal-600;
+        @apply text-indigo-600;
     }
 
 .custom-input {
@@ -165,13 +159,21 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    }.bg-form::after {
-        @apply absolute top-0 left-0 w-full h-full bg-indigo-500 opacity-50;
-        content: "";
-        z-index: 2;
-    }
+}
+
 /* shadow */
 .shadow-accent {
     box-shadow: 0px 3px 20px rgba(72, 187, 120, 0.5)
 }
+
+/* grid */
+.grid-4-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    } @media(max-width: 576px) {
+        .grid-4-col {
+            grid-template-columns: 1fr;
+        }
+    }
 @tailwind utilities;
