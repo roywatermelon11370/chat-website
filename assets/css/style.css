@@ -649,6 +649,10 @@ a {
   color: #4c51bf;
 }
 
+.min-h-screen-nav {
+  min-height: calc(100vh - 71px);
+}
+
 /* btn */
 
 .btn {
@@ -757,6 +761,25 @@ a {
 .btn-secondary:active {
   outline: 0;
   background-color: #a0aec0;
+}
+
+.btn-success {
+  background-color: #38b2ac;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #319795;
+  color: #fff;
+}
+
+.btn-success:focus {
+  outline: 0;
+}
+
+.btn-success:active {
+  outline: 0;
+  background-color: #285e61;
 }
 
 /* form */

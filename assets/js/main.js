@@ -1,20 +1,19 @@
 $(document).ready(function () {
+  // navbar
   $(window).on('scroll', function () {
     if ($(window).scrollTop()) {
-      $('#navbar').addClass('border-b').addClass('border-gray-200');
+      $('#navbar').addClass('border-b').addClass('border-gray-300');
     } else {
-      $('#navbar').removeClass('border-b').removeClass('border-gray-200');
+      $('#navbar').removeClass('border-b').removeClass('border-gray-300');
     }
   });
 
-  // navbtn 
+  // backtotop
   $('#backToTop').click(function (e) {
     e.preventDefault();
-    let target = $(this).attr('href');
-    let position = $(target).offset().top;
     $('html,body').stop().animate({
-      scrollTop: position
-    }, 500, 'swing')
+      scrollTop: 0
+    }, 300, 'swing')
   });
 
   // dropdown

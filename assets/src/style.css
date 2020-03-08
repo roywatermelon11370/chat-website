@@ -18,6 +18,10 @@ a {
         @apply text-indigo-700;
     }
 
+.min-h-screen-nav {
+    min-height: calc(100vh - 71px);
+}
+
 /* btn */
 .btn {
     @apply px-5 py-2 rounded inline-block uppercase;
@@ -80,6 +84,19 @@ a {
     }
     .btn-secondary:active {
         @apply outline-none bg-gray-500;
+    }
+
+.btn-success {
+    @apply bg-teal-500 text-white;
+    }
+    .btn-success:hover {
+        @apply bg-teal-600 text-white;
+    }
+    .btn-success:focus {
+        @apply outline-none;
+    }
+    .btn-success:active {
+        @apply outline-none bg-teal-800;
     }
 
 /* form */
