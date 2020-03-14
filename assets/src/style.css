@@ -225,22 +225,28 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     z-index: 7122;
 }
 
+.sidebar-hide {
+    transform: translate(-100%,0);
+    transition: all .3s cubic-bezier(.07,.66,.27,.99);
+    }
+
+.sidebar-active {
+    transform: translate(0 ,0);
+    transition: all .3s cubic-bezier(.07,.66,.27,.99);
+    }
+
 @media (min-width: 768px) {
     .sidebar {
         @apply w-1/4 overflow-y-scroll bg-gray-200 h-auto relative shadow-xl;
     }
-    .sidebar-hide .sidebar {
-        transform: translate(-75%,0);
-        transition: all .3s ease-out;
-        }.sidebar-hide .bg-dark {
-            display: none;
-        }
-    
-    .sidebar-active .sidebar {
-        transform: translate(0 ,0);
-        transition: all .3s ease-out;
-        }.sidebar-active .bg-dark {
-            display: block;
-        }
+
+    .sidebar-hide, .sidebar-active {
+        transform: translate(0,0);
+        transition: all .3s cubic-bezier(.07,.66,.27,.99);
+    }
+
+    .bg-dark {
+        display: none !important;
+    }    
 }
 @tailwind utilities;

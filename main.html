@@ -34,11 +34,11 @@
     </nav>
 
     <main class="min-h-screen-nav overflow-hidden flex">
-        <div class="fixed top-0 left-0 w-full h-full bg-dark md:hidden"></div>
-        <aside class="sidebar custom-scroll-bar sidebar-hide">
+        <div id="bg-dark" class="fixed top-0 left-0 w-full h-full bg-dark hidden"></div>
+        <aside id="sidebar" class="sidebar custom-scroll-bar sidebar-hide">
 
             <div class="p-3 block md:hidden">
-                <button id="sidebar-btn" onclick="sidebar()" class="bg-transparent border-0 text-gray-600 mdi mdi-arrow-left text-xl mr-3 inline md:hidden"></button>
+                <button id="sidebar-btn" onclick="sidebar()" class="bg-transparent border-0 text-gray-600 mdi mdi-close text-xl mr-3 inline md:hidden"></button>
             </div>
             <div class="p-3">
                 <form action="" method="post" class="bg-white flex rounded">
