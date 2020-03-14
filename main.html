@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>聊天系統</title>
+    <!-- tailwindcss + style.css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- main.js -->
+    <script src="assets/js/main.js"></script>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet">
+    <!-- material design icons -->
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.7.95/css/materialdesignicons.min.css">
+</head>
+
+<body>
+    <nav id="navbar" class="sticky top-0 left-0 w-full bg-white flex justify-center shadow">
+        <div class="w-full p-5 flex items-center justify-between">
+            <div class="flex-items-center">
+                <button id="sidebar-btn" onclick="sidebar()" class="bg-transparent border-0 text-gray-600 mdi mdi-menu text-xl mr-3 inline md:hidden"></button>
+                <a href="#" class="text-gray-900 font-bold text-xl">
+                    聊天室
+                </a>
+            </div>
+            <div class="flex items-center">
+                <a href="#" class='text-gray-600 hover:text-gray-700 mr-8'>設定</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="min-h-screen-nav overflow-hidden flex">
+        <div class="fixed top-0 left-0 w-full h-full bg-dark md:hidden"></div>
+        <aside class="sidebar custom-scroll-bar sidebar-hide">
+
+            <div class="p-3 block md:hidden">
+                <button id="sidebar-btn" onclick="sidebar()" class="bg-transparent border-0 text-gray-600 mdi mdi-arrow-left text-xl mr-3 inline md:hidden"></button>
+            </div>
+            <div class="p-3">
+                <form action="" method="post" class="bg-white flex rounded">
+                    <input type="text" class="w-full custom-input md:bg-white md:border-white rounded-r-none" placeholder="搜尋">
+                    <button type="submit" class="btn btn-primary rounded-l-none mdi mdi-magnify"></button>
+                </form>
+            </div>
+            <a href="#" class="aside-item">
+                <span class="bg-red-500 h-10 w-10 mr-5 rounded-full"></span>
+                <div class="inline-block">
+                    <h4 class="text-gray-900 text-lg">群組</h4>
+                    <p class="text-gray-600">Lorem, ipsum dolor.</p>
+                </div>
+            </a>
+            <a href="#" class="aside-item">
+                <span class="bg-green-500 h-10 w-10 mr-5 rounded-full"></span>
+                <div class="inline-block">
+                    <h4 class="text-gray-900 text-lg">群組</h4>
+                    <p class="text-gray-600">Lorem, ipsum dolor.</p>
+                </div>
+            </a>
+            <a href="#" class="aside-item">
+                <span class="bg-blue-500 h-10 w-10 mr-5 rounded-full"></span>
+                <div class="inline-block">
+                    <h4 class="text-gray-900 text-lg">群組</h4>
+                    <p class="text-gray-600">Lorem, ipsum dolor.</p>
+                </div>
+            </a>
+        </aside>
+
+        <section class="w-full min-h-screen-nav overflow-y-scroll md:w-3/4 custom-scroll-bar">
+            <div class="w-full md:w-3/4 p-3 fixed bottom-0 right-0 bg-white border-t border-gray-200">
+                <form action="" method="post" class="flex">
+                    <button onclick="" class="focus:outline-none bg-transparent border-0 text-gray-600 hover:text-gray-700 text-2xl mdi mdi-sticker-emoji px-2"></button>
+                    <button onclick="" class="focus:outline-none bg-transparent border-0 text-gray-600 hover:text-gray-700 text-2xl mdi mdi-image px-2"></button>
+                    <input type="text" class='custom-input w-full mx-2' placeholder="輸入文字">
+                    <button type="submit" class="btn btn-success mdi mdi-send ml-2"></button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -2,9 +2,9 @@ $(document).ready(function () {
   // navbar
   $(window).on('scroll', function () {
     if ($(window).scrollTop()) {
-      $('#navbar').addClass('border-b').addClass('border-gray-300');
+      $('#navbar').addClass('shadow');
     } else {
-      $('#navbar').removeClass('border-b').removeClass('border-gray-300');
+      $('#navbar').removeClass('shadow');
     }
   });
 
