@@ -1,16 +1,22 @@
 {
-    "name": "order-system",
-    "version": "1.0.0",
-    "description": "",
-    "main": "main.js",
-    "scripts": {
-        "build:css": "tailwind build assets/src/style.css -o assets/css/style.css"
-    },
-    "keywords": [],
-    "author": "aaa",
-    "license": "ISC",
-    "dependencies": {
-        "tailwindcss": "^1.1.3"
-    }
-
+  "name": "chat-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roywatermelon11370/chat-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roywatermelon11370/chat-website/issues"
+  },
+  "homepage": "https://github.com/roywatermelon11370/chat-website#readme"
 }

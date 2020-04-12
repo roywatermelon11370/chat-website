@@ -36,24 +36,11 @@ $(document).ready(function () {
     }
   }
 
-  // dropdown
-  dropdown = function (x) {
-    $(x).toggleClass('hidden');
-    $(x).toggleClass('block');
-    console.log('clicked');
-  }
-  window.onclick = function (event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('block')) {
-          openDropdown.classList.remove('block');
-          openDropdown.classList.add('hidden');
-        }
-      }
-    }
-  }
+  $('.h-screen-nav').css('height', function(){
+    var win = $(window).height();
+    var navv = $('#navbar').height();
+    var siz = win - navv;
+    return siz;
+  });
 
 });
