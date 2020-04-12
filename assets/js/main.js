@@ -17,23 +17,9 @@ $(document).ready(function () {
   });
 
   // sidebar 
-  sidebar = function() {
+  sidebarToggle = function() {
     $('#sidebar').toggleClass('sidebar-active').toggleClass('sidebar-hide');
     $('#bg-dark').toggleClass('hidden').toggleClass('block');
-  }
-  window.onclick = function (event) {
-    if (!event.target.matches('#sidebar')) {
-      var sidebar = $("#sidebar");
-      var i;
-      for (i = 0; i < sidebar.length; i++) {
-        if ($('#sidebar').hasClass('sidebar-active')) {
-          $('#sidebar').removeClass('sidebar-active');
-          $('#bg-dark').removeClass('block')
-          $('#sidebar').addClass('sidebar-hide');
-          $('#bg-dark').addClass('hidden')
-        }
-      }
-    }
   }
 
   $('.h-screen-nav').css('height', function(){

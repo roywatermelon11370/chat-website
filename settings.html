@@ -25,10 +25,10 @@
         <div id="bg-dark" class="fixed top-0 left-0 w-full h-full bg-dark hidden"></div>
         <aside id="sidebar" class="h-screen sidebar overflow-y-scroll custom-scroll-bar sidebar-hide">
 
-            <div class="sticky bg-gray-200 p-4">
-                <div class="p-3 block md:hidden">
-                    <button id="sidebar-btn" onclick="sidebar()"
-                        class="bg-transparent border-0 text-gray-600 mdi mdi-close text-xl mr-3 inline md:hidden"></button>
+            <div class="sticky bg-white md:bg-gray-200 p-4">
+                <div class="mb-5 block md:hidden">
+                    <button onclick="sidebarToggle()"
+                        class="btn-actionbar mdi mdi-close text-2xl mr-3 inline md:hidden"></button>
                 </div>
                 <header class="flex items-center justify-between w-full">
                     <h1 class="text-gray-900 text-xl">
@@ -45,26 +45,26 @@
                 </div>
             </div>
 
-            <a href="#" class="aside-item text-gray-700" :class="{ 'text-blue-600 font-bold' : tab === 'personal'}"
-                @click.prevent="tab='personal'">
+            <a href="#" class="aside-item text-gray-600" :class="{ 'text-blue-500 font-bold' : tab === 'personal'}"
+                @click.prevent="tab='personal'" onclick="sidebarToggle()">
                 <span class="mdi mdi-account text-xl mr-4"></span>
                 <p>個人資料</p>
             </a>
 
-            <a href="#" class="aside-item text-gray-700" :class="{ 'text-blue-600 font-bold' : tab === 'password'}"
-                @click.prevent="tab='password'">
+            <a href="#" class="aside-item text-gray-600" :class="{ 'text-blue-500 font-bold' : tab === 'password'}"
+                @click.prevent="tab='password'" onclick="sidebarToggle()">
                 <span class="mdi mdi-key text-xl mr-4"></span>
                 <p>修改密碼</p>
             </a>
 
-            <a href="#" class="aside-item text-gray-700" :class="{ 'text-blue-600 font-bold' : tab === 'other'}"
-                @click.prevent="tab='other'">
+            <a href="#" class="aside-item text-gray-600" :class="{ 'text-blue-500 font-bold' : tab === 'other'}"
+                @click.prevent="tab='other'" onclick="sidebarToggle()">
                 <span class="mdi mdi-settings text-xl mr-4"></span>
                 <p>其他設定</p>
             </a>
 
-            <a href="#" class="aside-item text-gray-700" :class="{ 'text-blue-600 font-bold' : tab === 'about'}"
-                @click.prevent="tab='about'">
+            <a href="#" class="aside-item text-gray-600" :class="{ 'text-blue-500 font-bold' : tab === 'about'}"
+                @click.prevent="tab='about'" onclick="sidebarToggle()">
                 <span class="mdi mdi-information text-xl mr-4"></span>
                 <p>關於</p>
             </a>
@@ -78,7 +78,7 @@
         <section class="w-full h-screen overflow-y-scroll custom-scroll-bar md:w-3/4 relative"
             x-show="tab === 'personal'">
             <nav id="navbar" class="flex items-center bg-blur justify-between py-5 px-5 sticky">
-                <button onclick="sidebar()"
+                <button onclick="sidebarToggle()"
                     class="btn-actionbar text-2xl mdi mdi-menu inline-block md:hidden mr-3"></button>
 
                 <div class="flex items-center">
@@ -124,7 +124,7 @@
         <section class="w-full h-screen overflow-y-scroll custom-scroll-bar md:w-3/4 relative"
             x-show="tab === 'password'">
             <nav id="navbar" class="flex items-center bg-blur justify-between py-5 px-5 sticky">
-                <button onclick="sidebar()"
+                <button onclick="sidebarToggle()"
                     class="btn-actionbar text-2xl mdi mdi-menu inline-block md:hidden mr-3"></button>
 
                 <div class="flex items-center">
@@ -163,7 +163,7 @@
 
         <section class="w-full h-screen overflow-y-scroll custom-scroll-bar md:w-3/4 relative" x-show="tab === 'other'">
             <nav id="navbar" class="flex items-center bg-blur justify-between py-5 px-5 sticky">
-                <button onclick="sidebar()"
+                <button onclick="sidebarToggle()"
                     class="btn-actionbar text-2xl mdi mdi-menu inline-block md:hidden mr-3"></button>
 
                 <div class="flex items-center">
@@ -256,7 +256,7 @@
 
         <section class="w-full h-screen overflow-y-scroll custom-scroll-bar md:w-3/4 relative" x-show="tab === 'about'">
             <nav id="navbar" class="flex items-center bg-blur justify-between py-5 px-5 sticky">
-                <button onclick="sidebar()"
+                <button onclick="sidebarToggle()"
                     class="btn-actionbar text-2xl mdi mdi-menu inline-block md:hidden mr-3"></button>
 
                 <div class="flex items-center">
