@@ -278,7 +278,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 @media (min-width: 768px) {
     .sidebar {
-        @apply w-1/4 overflow-y-scroll bg-gray-200 h-auto relative shadow-xl !important;
+        @apply w-1/4 overflow-y-scroll bg-gray-200 h-auto relative !important;
         z-index: 0;
     }
 
