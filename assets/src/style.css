@@ -114,31 +114,30 @@ a {
 }.btn-actionbar:focus {
     @apply outline-none;
 }
+
+.btn-icon {
+    @apply bg-transparent text-xl text-gray-600 border-0;
+}.btn-icon:hover {
+    @apply text-blue-700;
+}.btn-icon:focus {
+    @apply outline-none;
+}
 /* form */
 .custom-checkbox input[type="checkbox"]{
     display: none;
-    }
-    .custom-checkbox input[type="checkbox"] + label::before{
-        content: "\F12e";
-        @apply inline-block text-gray-200 relative mr-3;
-        font: normal normal normal 24px/1 "Material Design Icons";
-        font-size: inherit;
-    
-    }
-    .custom-checkbox input[type="checkbox"] + label:hover::before{
-        @apply text-gray-400;
-    
-    }
-    .custom-checkbox input[type="checkbox"]:checked + label::before{
-        content: "\F132";
-        @apply inline-block text-blue-500 relative mr-3;
-        font: normal normal normal 24px/1 "Material Design Icons";
-        font-size: inherit;
-    
-    }
-    .custom-checkbox input[type="checkbox"]:checked + label:hover::before{
-        @apply text-blue-600;
-    }
+}
+
+.custom-checkbox-icon::before {
+    @apply text-gray-600 text-xl;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    content: "\F131";
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-icon::before {
+    @apply text-blue-500 text-xl;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    content: "\F132";
+}
 
 .custom-switch input[type="checkbox"] {
     display: none;
@@ -228,6 +227,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .bg-dark {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000 !important;
+    animation: normal .3s ease-out fade;
+}
+
+@keyframes fade {
+    from {opacity:0}
+    to{opacity:1};
 }
 
 .bg-blur {
@@ -313,7 +318,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .list-item {
     transition: all .2s ease;
     cursor: pointer;
-    @apply p-3 inline-block w-full;
+    @apply p-3 flex justify-between items-center w-full;
     } .list-item:hover {
         transition: all .2s ease;
         @apply bg-gray-200;

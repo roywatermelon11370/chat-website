@@ -791,38 +791,39 @@ a {
   outline: 0;
 }
 
+.btn-icon {
+  background-color: transparent;
+  font-size: 1.25rem;
+  color: #718096;
+  border-width: 0;
+}
+
+.btn-icon:hover {
+  color: #2b6cb0;
+}
+
+.btn-icon:focus {
+  outline: 0;
+}
+
 /* form */
 
 .custom-checkbox input[type="checkbox"]{
   display: none;
 }
 
-.custom-checkbox input[type="checkbox"] + label::before{
-  content: "\F12e";
-  display: inline-block;
-  color: #edf2f7;
-  position: relative;
-  margin-right: 0.75rem;
+.custom-checkbox-icon::before {
+  color: #718096;
+  font-size: 1.25rem;
   font: normal normal normal 24px/1 "Material Design Icons";
-  font-size: inherit;
+  content: "\F131";
 }
 
-.custom-checkbox input[type="checkbox"] + label:hover::before{
-  color: #cbd5e0;
-}
-
-.custom-checkbox input[type="checkbox"]:checked + label::before{
-  content: "\F132";
-  display: inline-block;
+.custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-icon::before {
   color: #4299e1;
-  position: relative;
-  margin-right: 0.75rem;
+  font-size: 1.25rem;
   font: normal normal normal 24px/1 "Material Design Icons";
-  font-size: inherit;
-}
-
-.custom-checkbox input[type="checkbox"]:checked + label:hover::before{
-  color: #3182ce;
+  content: "\F132";
 }
 
 .custom-switch input[type="checkbox"] {
@@ -942,6 +943,28 @@ a {
 .bg-dark {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000 !important;
+  -webkit-animation: normal .3s ease-out fade;
+          animation: normal .3s ease-out fade;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity:0
+  }
+
+  to{
+    opacity:1
+  };
+}
+
+@keyframes fade {
+  from {
+    opacity:0
+  }
+
+  to{
+    opacity:1
+  };
 }
 
 .bg-blur {
@@ -1072,7 +1095,9 @@ a {
   transition: all .2s ease;
   cursor: pointer;
   padding: 0.75rem;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 } .list-item:hover {
   transition: all .2s ease;
