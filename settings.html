@@ -51,10 +51,10 @@
                 <p>個人資料</p>
             </a>
 
-            <a href="#" class="aside-item text-gray-600" :class="{ 'text-blue-500 font-bold' : tab === 'password'}"
-                @click.prevent="tab='password'" onclick="sidebarToggle()">
-                <span class="mdi mdi-key text-xl mr-4"></span>
-                <p>修改密碼</p>
+            <a href="#" class="aside-item text-gray-600" :class="{ 'text-blue-500 font-bold' : tab === 'security'}"
+                @click.prevent="tab='security'" onclick="sidebarToggle()">
+                <span class="mdi mdi-security text-xl mr-4"></span>
+                <p>安全性及隱私</p>
             </a>
 
             <a href="#" class="aside-item text-gray-600" :class="{ 'text-blue-500 font-bold' : tab === 'other'}"
@@ -122,42 +122,68 @@
         </section>
 
         <section class="w-full h-screen overflow-y-scroll custom-scroll-bar md:w-3/4 relative"
-            x-show="tab === 'password'">
-            <nav id="navbar" class="flex items-center bg-blur justify-between py-5 px-5 sticky">
-                <button onclick="sidebarToggle()"
-                    class="btn-actionbar text-2xl mdi mdi-menu inline-block md:hidden mr-3"></button>
+            x-show="tab === 'security'">
+            <div x-data="{ action:'none' }">
+                <div x-show="action==='none'" class="absolute w-full">
+                    <nav id="navbar" class="flex items-center bg-blur py-5 px-5 sticky">
+                        <button onclick="sidebarToggle()"
+                            class="btn-actionbar text-2xl mdi mdi-menu inline-block md:hidden mr-3"></button>
+                    </nav>
 
-                <div class="flex items-center">
-                    <h4 class="text-lg text-gray-900"></h4>
-                </div>
-                <div>
-                    <!-- I'm a placeholder -->
-                </div>
-            </nav>
+                    <div class="p-5 border-b border-gray-200">
+                        <h4 class="text-3xl font-bold text-gray-900">安全性及隱私</h4>
+                    </div>
 
-            <div class="p-5 border-b border-gray-200">
-                <h4 class="text-3xl text-gray-900 font-bold">修改密碼</h4>
+                    <div class="p-5 md:p-8 w-full md:w-2/3">
+                        <button @click="action='chpwd'" class="list-item flex">
+                            <div class="text-left">
+                                <h4 class="text-gray-900">修改密碼</h4>
+                                <p class="text-gray-600">把密碼改掉~</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div x-show="action==='chpwd'" class="absolute w-full" @click.away="action='none'" x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform scale-75" x-transition:enter-end="opacity-100"
+                    x-transition:leave="transition ease-out duration-300" x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0">
+                    <nav id="navbar" class="flex items-center bg-blur py-5 px-5 sticky">
+                        <button onclick="sidebarToggle()"
+                            class="btn-actionbar text-2xl mdi mdi-menu inline-block md:hidden mr-3"></button>
+                    </nav>
+
+                    <div class="p-5 border-b border-gray-200 flex items-center">
+                        <button class="btn-actionbar mr-5 mdi mdi-arrow-left" @click="action='none'"></button>
+                        <h4 class="text-xl text-gray-900">修改密碼</h4>
+                    </div>
+
+                    <div class="p-5">
+                        <form action="" method="post" class="p-5 md:px-8">
+                            <div class="block my-6">
+                                <label for="old" class="text-gray-600 mr-5"><span class="mdi mdi-key"></span>
+                                    原密碼</label>
+                                <input id="old" type="password" class="custom-input">
+                            </div>
+
+                            <div class="block my-6">
+                                <label for="new" class="text-gray-600 mr-5"><span class="mdi mdi-key"></span>
+                                    新密碼</label>
+                                <input id="new" type="password" class="custom-input">
+                            </div>
+
+                            <div class="block my-6">
+                                <label for="again" class="text-gray-600 mr-5"><span class="mdi mdi-key"></span>
+                                    確認密碼</label>
+                                <input id="again" type="password" class="custom-input">
+                            </div>
+
+                            <button type="reset" class=" btn btn-secondary ml-4">重設</button>
+                            <button type="submit" class="btn btn-primary ml-4">儲存</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-
-            <form action="" method="post" class="p-5 md:px-8">
-                <div class="block my-6">
-                    <label for="old" class="text-gray-600 mr-5"><span class="mdi mdi-key"></span> 原密碼</label>
-                    <input id="old" type="password" class="custom-input">
-                </div>
-
-                <div class="block my-6">
-                    <label for="new" class="text-gray-600 mr-5"><span class="mdi mdi-key"></span> 新密碼</label>
-                    <input id="new" type="password" class="custom-input">
-                </div>
-
-                <div class="block my-6">
-                    <label for="again" class="text-gray-600 mr-5"><span class="mdi mdi-key"></span> 確認密碼</label>
-                    <input id="again" type="password" class="custom-input">
-                </div>
-
-                <button type="reset" class=" btn btn-secondary ml-4">重設</button>
-                <button type="submit" class="btn btn-primary ml-4">儲存</button>
-            </form>
 
         </section>
 
@@ -165,13 +191,6 @@
             <nav id="navbar" class="flex items-center bg-blur justify-between py-5 px-5 sticky">
                 <button onclick="sidebarToggle()"
                     class="btn-actionbar text-2xl mdi mdi-menu inline-block md:hidden mr-3"></button>
-
-                <div class="flex items-center">
-                    <h4 class="text-lg text-gray-900"></h4>
-                </div>
-                <div>
-                    <!-- I'm a placeholder -->
-                </div>
             </nav>
 
             <div class="p-5 border-b border-gray-200">
@@ -242,7 +261,8 @@
                                 </div>
 
                                 <div class="flex justify-center mt-5">
-                                    <button type="button" class="btn btn-secondary mr-4" @click.prevent="delAccountOpen=false">取消</button>
+                                    <button type="button" class="btn btn-secondary mr-4"
+                                        @click.prevent="delAccountOpen=false">取消</button>
                                     <button type="submit" class="btn btn-danger">刪除帳號</button>
                                 </div>
                             </form>
