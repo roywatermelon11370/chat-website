@@ -125,12 +125,12 @@
                         <div x-show="action==='none'" x-transition:enter="transition ease-out duration-300"
                             x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
                             <div class="p-3 grid grid-cols-2 gap-4">
-                                <button class="w-full btn hover:bg-gray-300 text-gray-900" @click="action='addFriend'">
-                                    <span class="mdi mdi-account-plus text-3xl block text-blue-500"></span>
+                                <button class="w-full btn btn-primary" @click="action='addFriend'">
+                                    <span class="mdi mdi-account-plus text-2xl block"></span>
                                     新增朋友
                                 </button>
-                                <button class="w-full btn hover:bg-gray-300 text-gray-900" @click="action='createGroup'">
-                                    <span class="mdi mdi-account-multiple-plus text-3xl block text-blue-500"></span>
+                                <button class="w-full btn btn-primary" @click="action='createGroup'">
+                                    <span class="mdi mdi-account-multiple-plus text-2xl block"></span>
                                     建立群組
                                 </button>
                             </div>
