@@ -34,6 +34,9 @@ a {
         @apply shadow;
         transition: all .2s ease;
     }
+    .btn:focus {
+        @apply outline-none;
+    }
     .btn::selection {
         background: transparent;
     }
@@ -118,10 +121,11 @@ a {
 .btn-icon {
     @apply bg-transparent text-xl text-gray-600 border-0;
 }.btn-icon:hover {
-    @apply text-blue-700;
+    @apply text-gray-700;
 }.btn-icon:focus {
     @apply outline-none;
 }
+
 /* form */
 .custom-checkbox input[type="checkbox"]{
     display: none;
@@ -314,6 +318,20 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     z-index: 10000;
 }
 
+.modal-body {
+    animation: scale-up .2s ease-out;
+    @apply p-5 rounded-lg bg-white shadow-lg w-full;
+} 
+
+@keyframes scale-up {
+    from {transform: scale(0.75); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+@screen md {
+    .modal-body{ @apply w-5/12 }
+}
+
 /* list */
 .list-item {
     transition: all .2s ease;
@@ -327,4 +345,53 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     } .list-item:active {
         @apply bg-gray-400;
     }
+
+/* message */
+.message {
+    @apply mb-3 flex justify-start w-full;
+}
+
+.message-profile-photo {
+    @apply mr-3;
+}
+
+.message-content > h4 {
+    @apply text-gray-600;
+}
+
+.message-content {
+    @apply p-1 inline-block;
+}
+
+.message-bubble {
+    @apply bg-gray-200 text-gray-900 p-2 px-4 rounded;
+}
+
+.message-from-me {
+    @apply mb-3 flex justify-end w-full;
+}
+
+.message-from-me-content {
+    @apply p-1 inline-block text-right;
+}
+
+.message-from-me-content > h4 {
+    @apply text-gray-600;
+}
+
+.message-from-me-bubble {
+    @apply bg-teal-500 text-white p-2 px-4 rounded;
+}
+
+.message-from-system, .message-date {
+    @apply mb-3 flex justify-center;
+}
+
+.message-from-system-bubble {
+    @apply py-1 px-3 text-sm text-gray-600;
+}
+
+.message-date-bubble {
+    @apply bg-gray-600 py-1 px-3 text-sm text-white rounded-full;
+}
 @tailwind utilities;

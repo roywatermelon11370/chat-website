@@ -125,12 +125,12 @@
                         <div x-show="action==='none'" x-transition:enter="transition ease-out duration-300"
                             x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
                             <div class="p-3 grid grid-cols-2 gap-4">
-                                <button class="w-full btn btn-primary" @click="action='addFriend'">
-                                    <span class="mdi mdi-account-plus text-2xl block"></span>
+                                <button class="w-full btn hover:bg-gray-300 text-gray-900" @click="action='addFriend'">
+                                    <span class="mdi mdi-account-plus text-3xl block text-blue-500"></span>
                                     新增朋友
                                 </button>
-                                <button class="w-full btn btn-primary" @click="action='createGroup'">
-                                    <span class="mdi mdi-account-multiple-plus text-2xl block"></span>
+                                <button class="w-full btn hover:bg-gray-300 text-gray-900" @click="action='createGroup'">
+                                    <span class="mdi mdi-account-multiple-plus text-3xl block text-blue-500"></span>
                                     建立群組
                                 </button>
                             </div>
@@ -227,7 +227,7 @@
                             x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0"
                             x-transition:enter-end="opacity-100" x-transition:leave="transition ease-out duration-200"
                             x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-                            <div class="p-5 rounded-lg bg-white shadow-lg w-full md:w-5/12">
+                            <div class="modal-body">
                                 <h4 class="text-2xl text-gray-900 font-bold">更多訊息</h4>
                                 <div class="p-3 flex items-center">
                                     <span class="mdi mdi-account-group text-3xl text-blue-500 mr-4"></span>
@@ -301,12 +301,21 @@
             <!-- content -->
             <div class="overflow-y-scroll p-4 custom-scroll-bar" style="height: calc(100vh - 131px);">
 
+                <!-- message date -->
+                <div class="message-date">
+                    <div class="message-date-bubble">
+                        12/5 週日
+                    </div>
+                </div>
+
                 <!-- message -->
-                <div class="mb-3 flex justify-start w-full">
-                    <span class="mdi mdi-account-circle text-gray-700 text-2xl mr-3"></span>
-                    <div class="p-1 inline-block">
-                        <h4 class="text-gray-600">user · 19:05</h4>
-                        <div class="bg-gray-200 text-gray-900 p-2 px-4 rounded">
+                <div class="message">
+                    <div class="message-profile-photo">
+                        <span class="mdi mdi-account-circle text-gray-700 text-2xl"></span>
+                    </div>
+                    <div class="message-content">
+                        <h4>user · 19:05</h4>
+                        <div class="message-bubble">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, omnis itaque aperiam
                             hic, veniam voluptas quisquam, non illum accusantium similique doloribus modi eveniet ea
                             vitae minima voluptatem. Ut, dolor culpa?
@@ -314,13 +323,20 @@
                     </div>
                 </div>
 
-                <!-- message me -->
-                <div class="mb-3 flex justify-end w-full">
-                    <div class="p-1 inline-block text-right">
-                        <h4 class="text-gray-600">我 · 19:06</h4>
-                        <div class="bg-teal-500 text-white p-2 px-4 rounded">
+                <!-- message from me -->
+                <div class="message-from-me">
+                    <div class="message-from-me-content">
+                        <h4>我 · 19:06</h4>
+                        <div class="message-from-me-bubble">
                             Lorem ipsum dolor sit amet.
                         </div>
+                    </div>
+                </div>
+
+                <!-- message from system -->
+                <div class="message-from-system">
+                    <div class="message-from-system-bubble">
+                        This message is sent by system.
                     </div>
                 </div>
 
@@ -333,7 +349,7 @@
                         class="focus:outline-none bg-transparent border-0 text-gray-600 hover:text-gray-700 text-2xl mdi mdi-sticker-emoji px-2"></button>
                     <button onclick=""
                         class="focus:outline-none bg-transparent border-0 text-gray-600 hover:text-gray-700 text-2xl mdi mdi-image px-2"></button>
-                    <input type="text" class='custom-input w-full mx-2' placeholder="輸入文字">
+                    <input type="text" class='custom-input mx-2' style="width: calc(100% - 164px)" placeholder="輸入文字" required>
                     <button type="submit" class="btn btn-success mdi mdi-send ml-2"></button>
                 </form>
             </div>

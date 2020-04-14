@@ -22,11 +22,4 @@ $(document).ready(function () {
     $('#bg-dark').toggleClass('hidden').toggleClass('block');
   }
 
-  $('.h-screen-nav').css('height', function(){
-    var win = $(window).height();
-    var navv = $('#navbar').height();
-    var siz = win - navv;
-    return siz;
-  });
-
 });
