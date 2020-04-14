@@ -1203,7 +1203,7 @@ a {
   border-radius: 0.25rem;
 }
 
-.message-from-system,.message-date {
+.message-from-system {
   margin-bottom: 0.75rem;
   display: flex;
   justify-content: center;
@@ -1216,17 +1216,6 @@ a {
   padding-right: 0.75rem;
   font-size: 0.875rem;
   color: #718096;
-}
-
-.message-date-bubble {
-  background-color: #718096;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  font-size: 0.875rem;
-  color: #fff;
-  border-radius: 9999px;
 }
 
 .sr-only {

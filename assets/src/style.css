@@ -383,15 +383,11 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     @apply bg-teal-500 text-white p-2 px-4 rounded;
 }
 
-.message-from-system, .message-date {
+.message-from-system {
     @apply mb-3 flex justify-center;
 }
 
 .message-from-system-bubble {
     @apply py-1 px-3 text-sm text-gray-600;
-}
-
-.message-date-bubble {
-    @apply bg-gray-600 py-1 px-3 text-sm text-white rounded-full;
 }
 @tailwind utilities;
