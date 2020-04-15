@@ -88,7 +88,7 @@
                                     <p class="text-gray-600 mb-2">請在下方輸入你要新增的帳號。</p>
                                     <input type="text" class="custom-input w-full" x-ref="addFriendInput" required>
                                     <div class="mt-4 grid grid-cols-2 gap-4">
-                                        <button class="btn btn-secondary" @click.prevent="action='none'">取消</button>
+                                        <button class="btn btn-secondary" type="reset" @click.prevent="action='none'">取消</button>
                                         <button type="submit" class="btn btn-primary">新增</button>
                                     </div>
                                 </form>
@@ -115,7 +115,7 @@
                                     </label>
 
                                     <div class="mt-4 grid grid-cols-2 gap-4">
-                                        <button class="btn btn-secondary" @click.prevent="action='none'">取消</button>
+                                        <button class="btn btn-secondary" type="reset" @click.prevent="action='none'">取消</button>
                                         <button type="submit" class="btn btn-primary">建立</button>
                                     </div>
                                 </form>
