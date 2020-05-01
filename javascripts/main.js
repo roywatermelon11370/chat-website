@@ -22,6 +22,10 @@ $(document).ready(function () {
     $('#bg-dark').toggleClass('hidden').toggleClass('block');
   }
 
+  $('#bg-dark').click(function() {
+    sidebarToggle();
+  });
+
   $('.h-screen-nav').css('height', function(){
     var win = $(window).height();
     var navv = $('#navbar').height();
