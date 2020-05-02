@@ -77,12 +77,12 @@
 
         <section class="w-full h-screen overflow-y-scroll custom-scroll-bar md:w-3/4 relative"
             x-show="tab === 'personal'">
-            <nav id="navbar" class="flex items-center bg-blur py-5 px-5 sticky">
+            <nav id="navbar" class="navbar">
                 <button onclick="sidebarToggle()"
                     class="btn-actionbar text-2xl mdi mdi-menu inline-block md:hidden mr-3"></button>
             </nav>
 
-            <div class="p-5 border-b border-gray-200">
+            <div class="header">
                 <h4 class="text-3xl text-gray-900 font-bold">個人資料</h4>
             </div>
 
@@ -118,12 +118,12 @@
             x-show="tab === 'security'">
             <div x-data="{ action:'none' }">
                 <div x-show="action==='none'" class="absolute w-full">
-                    <nav id="navbar" class="flex items-center bg-blur py-5 px-5 sticky">
+                    <nav class="navbar">
                         <button onclick="sidebarToggle()"
                             class="btn-actionbar text-2xl mdi mdi-menu inline-block md:hidden mr-3"></button>
                     </nav>
 
-                    <div class="p-5 border-b border-gray-200">
+                    <div class="header">
                         <h4 class="text-3xl font-bold text-gray-900">安全性及隱私</h4>
                     </div>
 
@@ -136,7 +136,7 @@
                                     <p class="text-gray-600 text-sm">允許別人用你的帳號加你好友</p>
                                 </div>
 
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="" id="allowBeingAddedAsFriend">
                                 <span class="custom-switch-track">
                                     <span class="custom-switch-thumb"></span>
                                 </span>
@@ -148,7 +148,7 @@
                                     <p class="text-gray-600 text-sm">允許別人用你的帳號把你加入群組</p>
                                 </div>
 
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="" id="allowBeingAddedInGroup">
                                 <span class="custom-switch-track">
                                     <span class="custom-switch-thumb"></span>
                                 </span>
@@ -216,12 +216,12 @@
         <section class="w-full h-screen overflow-y-scroll custom-scroll-bar md:w-3/4 relative" x-show="tab === 'other'">
             <div x-data="{action: 'none'}">
                 <div x-show="action==='none'" class="absolute w-full">
-                    <nav id="navbar" class="flex items-center bg-blur justify-between py-5 px-5 sticky">
+                    <nav class="navbar">
                         <button onclick="sidebarToggle()"
                             class="btn-actionbar text-2xl mdi mdi-menu inline-block md:hidden mr-3"></button>
                     </nav>
 
-                    <div class="p-5 border-b border-gray-200">
+                    <div class="header">
                         <h4 class="text-3xl text-gray-900 font-bold">其他設定</h4>
                     </div>
 
@@ -265,9 +265,9 @@
                         </div>
                         <form action="" method="post" class="p-5 md:px-8">
                             <div class="block my-6">
-                                <label for="old" class="text-gray-600 mr-5"><span class="mdi mdi-key"></span>
+                                <label for="password" class="text-gray-600 mr-5"><span class="mdi mdi-key"></span>
                                     密碼</label>
-                                <input id="old" type="password" class="custom-input">
+                                <input id="password" type="password" class="custom-input">
                             </div>
 
                             <button type="reset" @click="action='none'" class=" btn btn-secondary ml-4">取消</button>
@@ -282,7 +282,7 @@
         </section>
 
         <section class="w-full h-screen overflow-y-scroll custom-scroll-bar md:w-3/4 relative" x-show="tab === 'about'">
-            <nav id="navbar" class="flex items-center bg-blur justify-between py-5 px-5 sticky">
+            <nav class="navbar">
                 <button onclick="sidebarToggle()"
                     class="btn-actionbar text-2xl mdi mdi-menu inline-block md:hidden mr-3"></button>
 
@@ -294,7 +294,7 @@
                 </div>
             </nav>
 
-            <div class="p-5 border-b border-gray-200">
+            <div class="header">
                 <h4 class="text-3xl text-gray-900 font-bold">關於</h4>
             </div>
 
