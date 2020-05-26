@@ -1300,6 +1300,7 @@ a {
   padding-left: 1rem;
   padding-right: 1rem;
   border-radius: 0.25rem;
+  display: inline-block
 }
 
 .message-from-me {
@@ -1332,6 +1333,7 @@ a {
   padding-left: 1rem;
   padding-right: 1rem;
   border-radius: 0.25rem;
+  display: inline-block
 }
 
 .message-from-system {
@@ -1376,6 +1378,29 @@ a {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   position: sticky;
+}
+
+/* infobar */
+
+#chat{
+}
+
+#infobar {
+  width: 25%;
+  position: relative;
+  border-left-width: 1px;
+  --border-opacity: 1;
+  border-color: #e2e8f0;
+  border-color: rgba(226, 232, 240, var(--border-opacity));
+  overflow-y: scroll;
+}
+
+.infobar-hide {
+  display: none;
+}
+
+.infobar-hide-chat  {
+  width: 100% !important;
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
@@ -8354,22 +8379,6 @@ a {
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.min-h-1\/4 {
-  min-height: 25%;
-}
-
-.min-h-1\/2 {
-  min-height: 50%;
-}
-
-.min-h-3\/4 {
-  min-height: 75%;
-}
-
-.min-h-75vh {
-  min-height: 75vh;
 }
 
 .min-w-0 {
@@ -26790,22 +26799,6 @@ a {
 
   .sm\:min-h-screen {
     min-height: 100vh;
-  }
-
-  .sm\:min-h-1\/4 {
-    min-height: 25%;
-  }
-
-  .sm\:min-h-1\/2 {
-    min-height: 50%;
-  }
-
-  .sm\:min-h-3\/4 {
-    min-height: 75%;
-  }
-
-  .sm\:min-h-75vh {
-    min-height: 75vh;
   }
 
   .sm\:min-w-0 {
@@ -45229,22 +45222,6 @@ a {
     min-height: 100vh;
   }
 
-  .md\:min-h-1\/4 {
-    min-height: 25%;
-  }
-
-  .md\:min-h-1\/2 {
-    min-height: 50%;
-  }
-
-  .md\:min-h-3\/4 {
-    min-height: 75%;
-  }
-
-  .md\:min-h-75vh {
-    min-height: 75vh;
-  }
-
   .md\:min-w-0 {
     min-width: 0;
   }
@@ -63666,22 +63643,6 @@ a {
     min-height: 100vh;
   }
 
-  .lg\:min-h-1\/4 {
-    min-height: 25%;
-  }
-
-  .lg\:min-h-1\/2 {
-    min-height: 50%;
-  }
-
-  .lg\:min-h-3\/4 {
-    min-height: 75%;
-  }
-
-  .lg\:min-h-75vh {
-    min-height: 75vh;
-  }
-
   .lg\:min-w-0 {
     min-width: 0;
   }
@@ -82101,22 +82062,6 @@ a {
 
   .xl\:min-h-screen {
     min-height: 100vh;
-  }
-
-  .xl\:min-h-1\/4 {
-    min-height: 25%;
-  }
-
-  .xl\:min-h-1\/2 {
-    min-height: 50%;
-  }
-
-  .xl\:min-h-3\/4 {
-    min-height: 75%;
-  }
-
-  .xl\:min-h-75vh {
-    min-height: 75vh;
   }
 
   .xl\:min-w-0 {

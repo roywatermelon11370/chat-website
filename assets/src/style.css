@@ -369,7 +369,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .message-bubble {
-    @apply bg-gray-200 text-gray-900 p-2 px-4 rounded;
+    @apply bg-gray-200 text-gray-900 p-2 px-4 rounded inline-block
 }
 
 .message-from-me {
@@ -385,7 +385,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .message-from-me-bubble {
-    @apply bg-teal-500 text-white p-2 px-4 rounded;
+    @apply bg-teal-500 text-white p-2 px-4 rounded inline-block
 }
 
 .message-from-system {
@@ -403,5 +403,18 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .navbar {
     @apply flex items-center sticky top-0 left-0 bg-blur py-5 px-5 sticky;
+}
+
+/* infobar */
+#infobar {
+    @apply w-1/4 relative border-l border-gray-300 overflow-y-scroll;
+}
+
+.infobar-hide {
+    @apply hidden;
+}
+
+.infobar-hide-chat  {
+    @apply w-full !important;
 }
 @tailwind utilities;
