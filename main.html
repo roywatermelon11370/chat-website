@@ -382,11 +382,13 @@
 
                     <!-- input -->
                     <div class="w-full p-3 bg-white border-t border-gray-300">
-                        <form action="" method="post" class="flex">
-                            <button onclick=""
-                                class="focus:outline-none bg-transparent border-0 text-gray-600 hover:text-gray-700 text-2xl mdi mdi-sticker-emoji px-2"></button>
-                            <button onclick=""
-                                class="focus:outline-none bg-transparent border-0 text-gray-600 hover:text-gray-700 text-2xl mdi mdi-image px-2"></button>
+                        <form action="" method="post" class="flex items-center">
+                            <label for="file" class="focus:outline-none bg-transparent border-0 text-gray-600 hover:text-gray-700 text-2xl mdi mdi-paperclip px-2 cursor-pointer">
+                                <input type="file" name="file" id="file" class="hidden">
+                            </label>
+                            <label for="image" class="focus:outline-none bg-transparent border-0 text-gray-600 hover:text-gray-700 text-2xl mdi mdi-image px-2 cursor-pointer">
+                                <input type="file" name="file" id="image" class="hidden">
+                            </label>
                             <input type="text" class='custom-input mx-2' style="width: calc(100% - 164px)"
                                 placeholder="輸入文字" required>
                             <button type="submit" class="btn btn-success mdi mdi-send ml-2"></button>
@@ -412,13 +414,6 @@
                             <button class="list-item" @click="action='search'">
                                 <h4>搜尋對話</h4>
                                 <span class="mdi mdi-magnify text-gray-600 text-xl"></span>
-                            </button>
-                            <button class="list-item">
-                                <div class="text-left">
-                                    <h4>通知</h4>
-                                    <p class="text-sm text-gray-600">靜音</p>
-                                </div>
-                                <span class="mdi mdi-bell-off-outline text-gray-600 text-xl"></span>
                             </button>
                             <button class="list-item">
                                 <div class="text-left">
