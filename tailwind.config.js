@@ -1,4 +1,19 @@
 module.exports = {
+  purge: {
+    enabled: true,
+    mode: 'all',
+    content: [
+      './index.html',
+      './settings.html',
+      './register.html',
+      './login.html',
+      './main.html',
+    ],
+
+    options: {
+      whitelist: ['bg-blue-500', 'transition', 'ease-out', 'duration-200', 'transform', '-translate-y-4', 'translate-y-0'],
+    }
+  },
   theme: {
     extend: {
       colors: {
